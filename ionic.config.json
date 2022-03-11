@@ -1,0 +1,7 @@
+{
+  "name": "first-mobile-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

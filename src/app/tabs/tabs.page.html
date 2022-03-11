@@ -1,0 +1,56 @@
+
+<!-- tools -->
+<ion-toolbar *ngIf="showToolsBar()" mode="ios" style="--background: white; position: relative;">
+  <ion-buttons slot="start" hidden>
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button routerLink="/tabs/message">
+      <ion-badge class="notific" mode="ios"
+        style="position: absolute;width: '10px';height: '10px'; top: 0; right: 0; display: block; background: gray; padding-inline-start: 0;">
+      </ion-badge>
+      <ion-icon slot="icon-only" name="chatbox-ellipses-outline" style="position: relative;" ></ion-icon>
+
+    </ion-button>
+    <ion-button routerLink="/account">
+      <ion-icon slot="icon-only" name="person-circle-outline" mode="ios" ></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="radio-sharp" mode="ios" style="background: gray; color: white;"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+
+<!-- pages -->
+<ion-router-outlet></ion-router-outlet>
+
+<!-- tabs -->
+<ion-tabs>
+    <ion-tab-bar slot="bottom" mode="ios">
+
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="peers">
+        <ion-icon name="people-outline">
+        </ion-icon>
+        <ion-label>peers</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button></ion-tab-button>
+
+      <ion-tab-button tab="resource">
+        <ion-icon name="albums-outline"></ion-icon>
+        <ion-label>Resources</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="explore">
+        <ion-icon name="compass-outline"></ion-icon>
+        <ion-label>explore</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>

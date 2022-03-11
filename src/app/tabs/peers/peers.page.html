@@ -1,0 +1,52 @@
+<ion-toolbar></ion-toolbar>
+
+<ion-content style="width: '100%'; height: '100vh'; padding: '0px 15px'; ">
+  <div class="headerdiv">
+    <h2 class="title">Peer Network</h2>
+    <ion-searchbar class="search" placeholder="Whats on your mind" mode="ios" animated debounce="500">
+    </ion-searchbar>
+
+    <div class="categories">
+      <p class="category" *ngFor="let e of category; index as i"
+        [style]="i === category.length-1?'margin-right: 0px;':''"> {{e.message}} </p>
+    </div>
+
+    <div class="peers">
+      <p class="title" style="font-size: '13px';">Spaces</p>
+
+      <ion-grid class="grid">
+        <ion-row>
+          <ion-col sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let e of peers; index as i">
+
+            <div class="content">
+              <img class="peerimage" src="{{e.img}}">
+              <p style="font-size: '15px';"><strong>{{e.title}}</strong></p>
+              <div style="display: flex;">
+                <p style="display: flex; align-items: center; justify-content: center;">
+                  <ion-icon name="person-sharp" mode="md"></ion-icon>{{e.votes}}
+                </p>
+                <p>{{e.watched}}</p>
+              </div>
+              <div>
+                <p>{{e.description}}</p>
+              </div>
+            </div>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+
+    <!-- start -->
+    <!-- <video width="100%" height="300px" controls>
+      <source src="movie.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video> -->
+    <!-- <iframe height="300px" width="100%" src="https://www.youtube.com/embed/il_t1WVLNxk">
+    </iframe> -->
+    <!-- example video for me  -->
+  </div>
+
+</ion-content>

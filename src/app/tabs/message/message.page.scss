@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+}
+
+ion-toolbar {
+
+  --background: rgb(78, 78, 78);
+  height: 70px;
+  display: flex;
+  align-items: center;
+
+  .toolbarInside {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .usr {
+      flex: 1;
+      margin: 0 10px;
+
+      .usrdata {
+        color: whitesmoke;
+        margin: 0 10px;
+        width: 100%;
+      }
+    }
+
+    .callblock {
+      >* {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+ion-content {
+
+  .head {
+    width: 100vw;
+    height: 100%;
+    background: rgba(78, 84, 87, 0.623);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    .messIntro {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      color: whitesmoke;
+      padding: 0 15px;
+      background: linear-gradient(rgb(78, 78, 78), rgba(153, 153, 153, 0));
+      z-index: 10000;
+    }
+
+    .messages {
+      background: rgba(78, 84, 87, 0.623);
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .messsage-div {
+        min-width: 20px;
+        max-width: 80%;
+        background: lightgray;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+    }
+
+    .messageBox {
+      width: 100%;
+      height: 75px;
+      background: rgb(94, 94, 94);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0 10px 15px;
+
+      .inputMessage {
+        width: 88%;
+        height: 35px;
+        background: whitesmoke;
+        border-radius: 5vh;
+        border: none;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+
+}

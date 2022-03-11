@@ -1,0 +1,192 @@
+page-home {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @media screen and (max-width: 600px) {
+      & {
+        flex-wrap: wrap;
+      }
+      .progress {
+        height: unset;
+      }
+    }
+
+    .progress {
+      height: 100%;
+    }
+  }
+}
+
+.div1{
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 2vh;
+  margin: 20px 0px 10px 0px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.headerdiv{
+  width: 100%;
+  height: 100%;
+  padding: 30px 10px 10px 10px;
+}
+ion-toolbar{
+ion-icon{
+  font-size: 20px;
+  color: gray;
+  background: whitesmoke;
+  padding: 5px;
+  border-radius: 50%;
+}
+}
+.alertcss {
+  --backdrop-opacity: 0.2;
+  --background: linear-gradient(90deg, rgba(165, 255, 192, 1) 1%, rgba(0, 212, 255, 1) 100%);
+}
+.paragraph{
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.header{
+  margin: 2px 0px;
+  color: gray;
+}
+.cardvideobox{
+  min-width: 200px;
+  height: 100px;
+  background: whitesmoke;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 0px 5px 0px 0px ;
+}
+.cardtitle{
+  font-size: 18px;
+  color: gray;
+  align-self: flex-start;
+  width: 90%;
+}
+.cardbutton{
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.cardsubtitle{
+  font-size: 10px;
+  align-self: flex-start;
+  justify-self: center;
+}
+.popover{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  margin: 0;
+  position: absolute;
+  left: 10;
+  top: 0;
+  color: gray;
+}
+.titleBox{
+  background: whitesmoke;
+  color: gray;
+  width: 100%;
+  height: 80px;
+  border-radius: 2vh;
+  margin: 10px 0px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.titleBox> p{
+  font-size: 13px;
+}
+.titleBox h6,p{
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.titleBox2{
+  background: whitesmoke;
+  color: gray;
+  width: 100%;
+  height: 50px;
+  border-radius: 2vh;
+  margin: 10px 0px;
+  padding: 0px 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titleBox2> p{
+  font-size: 15px;
+}
+.contentBox{
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 15px;
+}
+.contentBox2> p{
+  font-size: 15px;
+}
+.contentBox2{
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 15px;
+}
+.contentBox3{
+  background: whitesmoke;
+  color: gray;
+  width: 100%;
+  height: 140px;
+  border-radius: 2vh;
+  margin: 10px 0px 10px 0px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.contentBox3> div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start ;
+}
+.div2{
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 2vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}

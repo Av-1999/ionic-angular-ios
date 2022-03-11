@@ -1,0 +1,72 @@
+<ion-toolbar mode="ios">
+  <ion-buttons slot="start">
+    <ion-back-button style="margin: '0px 0px 0px 10px';" defaultHref="/tabs/home" icon="chevron-back" text=""
+      color="dark">
+    </ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content class="content" scrollY="false">
+  <div class="header-div">
+
+    <div class="profile-box">
+
+      <div class="avatar">
+        <img *ngIf="false" style="width: '100%'; height: '100%'; object-fit: cover;" src="" alt="profile pictrue">
+        <ion-icon *ngIf="true" style="width: '50%'; height: '50%'; object-fit: cover;" name="person-sharp"
+          color="medium"></ion-icon>
+        <div *ngIf="true"
+          style="width: '20px'; height: '20px'; border-radius: '50%'; background: gray; position: absolute; right: '5px'; bottom: '5px';">
+        </div>
+      </div>
+
+      <div class="profile-name">
+        <strong>esiminch Pure Name</strong>
+        <p>chi erevum inch</p>
+      </div>
+
+      <div class="fallows-bar">
+        <div class="info1">
+          <p>text l <ion-icon name="flash-sharp"></ion-icon>
+          </p>
+          <p>description</p>
+        </div>
+        <div class="info2">
+          <p>text 2 <ion-icon name="flash-sharp"></ion-icon>
+          </p>
+          <p>description</p>
+        </div>
+        <div class="info3">
+          <p>text 3 <ion-icon name="flash-sharp"></ion-icon>
+          </p>
+          <p>description</p>
+        </div>
+      </div>
+
+      <div class="fallow-box">
+        <button class="fallow-btn">Fallow</button>
+        <button class="chat-btn">Chat with someone</button>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+
+    </div>
+
+    <div class="persons-box">
+      <div class="uptext">
+        <p>esiminch peers</p>
+        <p>View all <ion-icon name="flash-sharp" size="small"></ion-icon></p>
+      </div>
+
+      <div class="user" *ngFor="let user of users; index as i">
+        <ion-button mode="ios"color="none" size="medium" style="border-radius: '50%';background: whitesmoke; display: flex; align-items: center; justify-content: center;">
+          <ion-icon mode="ios" name="person-sharp" color="medium"></ion-icon>
+        </ion-button>
+        <p class="user-element">{{user.name}} {{user.surname}}</p>
+        <ion-icon mode="ios" style="color: lightgray; zoom: 1.5;" name="chevron-forward-outline"></ion-icon>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,69 @@
+<!-- eslint-disable @angular-eslint/template/eqeqeq -->
+<ion-toolbar class="toolbar">
+  <div class="toolbarInside">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/tabs/home" icon="chevron-back" text=""
+        (click)="hideAnimation('toolbar')">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start" class="usr">
+      <ion-button
+        style="border-radius: '50%';background: whitesmoke; display: flex; align-items: center; justify-content: center;">
+        <ion-icon name="person-sharp" color="medium"></ion-icon>
+      </ion-button>
+      <div class="usrdata">
+        <p><strong> name surname </strong></p>
+        <p>something</p>
+      </div>
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="callblock">
+
+      <ion-button>
+        <ion-icon size="large" color="light" name="videocam-off-outline"></ion-icon>
+      </ion-button>
+
+      <!-- <ion-button>
+    <ion-icon name="videocam-outline"></ion-icon>
+    </ion-button> -->
+
+      <ion-button>
+        <ion-icon size="large" color="light" name="call-outline"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </div>
+</ion-toolbar>
+
+
+
+
+
+<ion-content scrollY="false" (click)="click()">
+  <div class="head">
+    <div class="messIntro" *ngIf="messageTitle" (click)="click()">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum fugit voluptate quam omnis </p>
+    </div>
+
+    <ion-content #messageContainer>
+      <div *ngIf="userData" class="messages" (click)="click()">
+        <div class="messsage-div" *ngFor="let message of chat; index as a"
+          [style]="message.fromId === userData.id? 'align-self: flex-end':''">
+          <p>{{message.message}}</p>
+        </div>
+      </div>
+    </ion-content>
+    
+    <div class="messageBox">
+      <input placeholder="message..." class="inputMessage" [(ngModel)]="isTyped"/>
+
+      <ion-button color="false" (click)="isTyped? sendMessage('messages'): false">
+        <ion-icon *ngIf="!isTyped" name="mic-outline" size="large" color="light"></ion-icon>
+        <ion-icon *ngIf="isTyped" name="send-sharp" size="large" color="light"></ion-icon>
+      </ion-button>
+
+    </div>
+
+  </div>
+</ion-content>

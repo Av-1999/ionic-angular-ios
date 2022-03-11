@@ -1,0 +1,105 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+.ioncardcontent{
+  z-index: 1;
+  width: 100%;
+  height: 70%;
+  background: white;
+  margin: 40px 0px;
+}
+.head{
+  transition: 0.4s;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  background: rgba(139, 139, 139, 0.377);
+}
+
+.logo::part(image){
+  width: 50%;
+  height: 30px;
+  margin: auto;
+}
+.banner{
+  transition: 1s;
+  height: 30%;
+  position: absolute;
+}
+.closeplace{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+}
+.neogovinputs{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 25px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+.input1{
+  width: 100%;
+  height: 80px;
+}
+.input2{
+  width: 100%;
+  height: 80px;
+}
+.inp{
+  width: 100%;
+  height: 35px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  --padding-bottom: 0;
+  --padding-top:0;
+  --padding-end:10px;
+  --padding-start:10px;
+
+}
+
+.contentLogin{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0px 15px;
+  box-sizing: border-box;
+  }
+.ion-btn{
+  width: 100%;
+}
+.card> div{
+  width: 100%;
+}
+small{
+  color: red;
+}
+.cardsignin{
+  max-height: 100vh;
+  top: 50px;
+  z-index: 12;
+}
+

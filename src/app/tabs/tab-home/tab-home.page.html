@@ -1,0 +1,126 @@
+<ion-toolbar>
+</ion-toolbar>
+
+<!-- model alert -->
+
+<ion-modal class="modall" [isOpen]="whyAreYouHere" [backdropDismiss]="true" mode="ios"
+  style="--background:rgba(71, 71, 71, ) ; padding: '20px 20px 20px 20px'; position: absolute; top:0;">
+  <ng-template>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-xs="100%" offset-xs="0" size-sm="8" offset-sm="2">
+
+          <ion-card class="bannerCard" mode="ios">
+            <div class="titles">
+              <ion-card-title mode="ios" style="color: white; padding: '10px 10px 0px 10px'; font-size: '18px';"> Why are you here
+                today?</ion-card-title>
+              <p style="color: lightgray; padding: '0px 10px 0px 10px'; margin: '0px';">qori text poqr
+              </p>
+            </div>
+            <div class="content">
+              <ion-card-content mode="ios" class="modalContent">
+                <ion-grid>
+                  <ion-row size="12">
+                    <ion-col *ngFor="let e of whyAreYouHereMessage; index as i" size="auto">
+                      <div class="modalContentDiv" [style]="e.chosed?' background: lightgray':''"
+                        (click)="whyAreYouHereChoosed(e);">
+                        <p class="modalText"> {{e.message}} </p>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card-content>
+            </div>
+            <div class="buttons">
+
+              <ion-card-content mode="ios"style="display: flex;align-items: center;justify-content: center; padding: '0px';">
+                <ion-button class="button" fill="outline" size="block" color="light" mode="ios"
+                  (click)="closeWhyAreYouHere()">Not now</ion-button>
+                <div style="height: '30px';border: '1px solid lightgray'; width: '1px';margin: '10px 0px';"></div>
+                <ion-button class="button" fill="outline" size="block" color="light" mode="ios"
+                  (click)="sendWhyAreYouHere()">Continue</ion-button>
+              </ion-card-content>
+
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+
+</ion-modal>
+<!-- end  -->
+
+
+
+<ion-content scrollY="initial" style="width: '100%'; height: '100vh'; padding: '0px 15px'; ">
+  <div class="headerdiv">
+
+    <h2 class="title"> Title </h2>
+    <!-- title -->
+    <div class="titleBox">
+      <h6> {{userData?userData.name:'loading'}} </h6>
+      <p>text witch unbeliveable to read</p>
+    </div>
+
+    <div class="titleBox2">
+      <p>text witch unbeliveable to read cause it very small size</p>
+      <ion-button size="small" color="medium" mode="ios"> someth writ</ion-button>
+    </div>
+
+    <div class="contentBox">
+      <p class="title"> chi erevum </p>
+      <div class="div1" style="overflow-x: scroll;overflow-y: hidden;">
+        <ion-card class="cardvideobox" *ngFor="let e of videos index as i">
+          <div class="popover">
+            <ion-icon id="nested-button" name="menu" (click)="presentPopover($event)"></ion-icon>
+          </div>
+          <ion-card-title class="cardtitle" mode="ios">{{e.title}}</ion-card-title>
+          <ion-card-subtitle class="cardsubtitle" mode="ios">{{e.minute}}</ion-card-subtitle>
+          <ion-button class="cardbutton" size="small" color="medium" mode="ios">Watch Now</ion-button>
+        </ion-card>
+      </div>
+    </div>
+
+    <div class="contentBox2">
+      <p class="title"> Uncoming Group Messages </p>
+      <div class="div2">
+        <div class="contentBox3">
+          <div style="justify-content: space-between;">
+            <span>chi erevum</span>
+            <div>
+              <ion-icon style="margin: 5px;" name="lock-closed-outline" mode="ios"></ion-icon>
+              <ion-icon style="margin: 5px;" id="nested-button" name="menu" mode="ios" (click)="presentPopover($event)">
+              </ion-icon>
+            </div>
+          </div>
+          <div class="privatX">
+            <strong>Angry Menegment <br> Group Session</strong>
+          </div>
+          <div style="position: relative;">
+            <ion-icon name="pin-outline" mode="ios"></ion-icon>
+            <p> text </p>
+            <ion-button size="small" color="medium" mode="ios" style="position: absolute; right: 0; width: '100px';"> join mek </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contentBox">
+      <p class="title">eli chi erevum </p>
+      <div class="div1" style="overflow-x: scroll;overflow-y: hidden;">
+        <ion-card class="cardvideobox" *ngFor="let e of videos index as i">
+          <div class="popover">
+            <ion-icon id="nested-button" name="menu" mode="ios" (click)="presentPopover($event)"></ion-icon>
+          </div>
+          <ion-card-title class="cardtitle" mode="ios">{{e.title}}</ion-card-title>
+          <ion-card-subtitle class="cardsubtitle" mode="ios">{{e.minute}}</ion-card-subtitle>
+          <ion-button class="cardbutton" size="small" color="medium" mode="ios">Watch Now</ion-button>
+        </ion-card>
+      </div>
+    </div>
+
+
+
+  </div>
+</ion-content>

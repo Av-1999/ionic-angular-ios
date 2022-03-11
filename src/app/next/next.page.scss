@@ -1,0 +1,95 @@
+*{
+  --margin: 0;
+  --padding: 0;
+  --border:none;
+  --overflow: hidden;
+}
+ion-card-content{
+  padding: 0;
+}
+.sliderscontent{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.cardslider{
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: none;
+  z-index: 0;
+}
+.defaultimg::part(image){
+  height: 150px;
+  width: 150px;
+  border-radius: 50% ;
+  margin-bottom: 70px;
+  box-sizing: border-box;
+  object-fit: unset;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.slider1{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sliders{
+  --bullet-background: black;
+  --bullet-background-active: gray;
+  width: 100%;
+}
+.slidercontenttext{
+  font-size: 13px;
+}
+.slidercontent{
+  width: 100%;
+  height: 100px;
+}
+.signInButton{
+  width: 100%;
+}
+.slidercontainer1{
+  width: 100%;
+}
+.signina{
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.signupa{
+  width: 100%;
+  height: 10px;
+  text-decoration: none;
+  color: gray;
+  text-align: center;
+  display: inline-block;
+}
+.signblock{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+
+@media (max-height: 580px) {
+  .defaultimg::part(image) {
+    margin-bottom: 0px;
+  }
+  .signblock{
+    height: 120px;
+  }
+}

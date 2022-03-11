@@ -1,0 +1,69 @@
+page-home {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @media screen and (max-width: 600px) {
+      & {
+        flex-wrap: wrap;
+      }
+      .progress {
+        height: unset;
+      }
+    }
+
+    .progress {
+      height: 100%;
+    }
+  }
+}
+
+.div1{
+  background: whitesmoke;
+  width: 100%;
+  height: 80px;
+  border-radius: 2vh;
+  margin: 10px 0px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  display: flex;
+
+}
+.headerdiv{
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+}
+ion-toolbar{
+ion-icon{
+  font-size: 20px;
+  color: gray;
+  background: whitesmoke;
+  padding: 5px;
+  border-radius: 50%;
+  height: 50px;
+}
+}
+.alertcss {
+  --backdrop-opacity: 0.2;
+  --background: linear-gradient(90deg, rgba(165, 255, 192, 1) 1%, rgba(0, 212, 255, 1) 100%);
+}
+.paragraph{
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.header{
+  margin: 2px 0px;
+  color: gray;
+}
+.tabs{
+  position: absolute;
+}
+
+

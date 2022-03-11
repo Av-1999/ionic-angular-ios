@@ -1,0 +1,87 @@
+<ion-toolbar></ion-toolbar>
+
+
+<ion-content scrollY="initial" style="width: '100%'; height: '100vh'; padding: '0px 15px'; ">
+  <div class="headerdiv">
+
+    <h2 class="title"> {{user.name}} </h2>
+    <!-- title -->
+    <div class="titleBox">
+      <!--  -->
+      <div class="div1" *ngIf="true">
+        <circle-progress [maxPercent]="100" [percent]="user.progres" [radius]="30" [outerStrokeWidth]="10"
+          [outerStrokeColor]="'gray'" [innerStrokeWidth]="10" [innerStrokeColor]="'white'"
+          [backgroundColor]="'whitesmoke'" [showInnerStroke]="true" [animation]="true" [animateTitle]="true"
+          [showSubtitle]="false" [space]="-10" [showZeroOuterStroke]="false" [animationDuration]="300"
+          [backgroundPadding]="0">
+        </circle-progress>
+        <div>
+          <h6> {{user.name}} {{user.surname}} </h6>
+          <p>text witch unbeliveable to read</p>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+
+    <div class="titleBox2">
+      <p>text witch unbeliveable to read cause it very small size</p>
+      <ion-button size="small" color="medium"> someth writ</ion-button>
+    </div>
+
+    <div class="contentBox">
+      <p class="title"> chi erevum </p>
+      <div class="div1" style="overflow-x: scroll;overflow-y: hidden;">
+        <ion-card class="cardvideobox" *ngFor="let e of videos index as i">
+          <div class="popover">
+            <ion-icon id="nested-button" name="menu" (click)="presentPopover($event)"></ion-icon>
+          </div>
+          <ion-card-title class="cardtitle" mode="ios">{{e.title}}</ion-card-title>
+          <ion-card-subtitle class="cardsubtitle" mode="ios">{{e.minute}}</ion-card-subtitle>
+          <ion-button class="cardbutton" size="small" color="medium" mode="ios">Watch Now</ion-button>
+        </ion-card>
+      </div>
+    </div>
+
+    <div class="contentBox2">
+      <p class="title"> Uncoming Group Messages </p>
+      <div class="div2">
+        <div class="contentBox3">
+          <div style="justify-content: space-between;">
+            <span>chi erevum</span>
+            <div>
+              <ion-icon style="margin: 5px;" name="lock-closed-outline" mode="ios"></ion-icon>
+              <ion-icon style="margin: 5px;" id="nested-button" name="menu" mode="ios" (click)="presentPopover($event)">
+              </ion-icon>
+            </div>
+          </div>
+          <div class="privatX">
+            <strong>Angry Menegment <br> Group Session</strong>
+          </div>
+          <div style="position: relative;">
+            <ion-icon name="pin-outline" mode="ios"></ion-icon>
+            <p> text </p>
+            <ion-button size="small" color="medium" style="position: absolute; right: 0; width: '100px';" mode="ios"> join mek
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contentBox">
+      <p class="title">eli chi erevum </p>
+      <div class="div1" style="overflow-x: scroll;overflow-y: hidden;">
+        <ion-card class="cardvideobox" *ngFor="let e of videos index as i" mode="ios">
+          <div class="popover">
+            <ion-icon id="nested-button" name="menu" mode="ios" (click)="presentPopover($event)"></ion-icon>
+          </div>
+          <ion-card-title class="cardtitle" mode="ios">{{e.title}}</ion-card-title>
+          <ion-card-subtitle class="cardsubtitle" mode="ios">{{e.minute}}</ion-card-subtitle>
+          <ion-button class="cardbutton" size="small" color="medium" mode="ios">Watch Now</ion-button>
+        </ion-card>
+      </div>
+    </div>
+
+
+
+  </div>
+</ion-content>

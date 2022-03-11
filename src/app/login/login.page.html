@@ -1,0 +1,103 @@
+<ion-content [scrollY]="false">
+
+  <!-- signin banner here -->
+  <div class="head" [style]="isopen?'opacity:1;height:100%;':'opacity:0;height:0%;'">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-xs="12" offset-xs="0" size-sm="8" offset-sm="2" size-md="8" offset-md="2" size-lg="4" offset-lg="4" >
+          <ion-card class="cardsignin" [style]="isopen?'opacity:1':'opacity:0;display:none'">
+            <ion-button color="medium" mode="ios" size="medium" fill="outline" style=" --border-style: none; z-index: 2; position: absolute; right: 0;" (click)="isLoginBannerOpen()">X</ion-button>
+            <ion-card-content class="ioncardcontent">
+              <ion-card-header>
+                <ion-card-title>
+                  <ion-img class="logo" src="https://login.staging.neogov.net/Content/images/neogov-logo.png"></ion-img>
+                </ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content>
+                <div class="neogovinputs">
+
+                  <div style="width: '100%';">
+                    <div class="input1">
+                      <ion-label position="stacked">Username</ion-label>
+                      <ion-input class="inp" id="inp5" (ionFocus)="focusEmail('inp5')" (ionBlur)="unFocusEmail('inp5')" [(ngModel)]="signin.email">
+                      </ion-input>
+                      <small>{{signinValidation.email}}</small>
+                    </div>
+                    <div class="input2">
+                      <ion-label position="stacked">Password</ion-label>
+                      <ion-input class="inp" id="inp6" (ionFocus)="focusEmail('inp6')" (ionBlur)="unFocusEmail('inp6')" [(ngModel)]="signin.password">
+                      </ion-input>
+                      <small>{{signinValidation.password}}</small>
+                    </div>
+                  </div>
+
+                  <div
+                    style="width: '100%';height: '150px'; display: flex;align-items: center; justify-content: space-around;flex-direction: column;">
+
+                    <ion-button
+                      style="width: '100%'; height: '40px'; margin:'10px 0px';--background: rgb(5, 95, 168); --border-radius: '5px';" (click)="signinSubmit()">
+                      Log in</ion-button>
+                    <a style="color: rgb(5, 95, 168);">forgot your password? </a>
+
+                  </div>
+
+                </div>
+              </ion-card-content>
+
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="closeplace" [style]="isopen?'display:block':'display:none'" (click)="isLoginBannerOpen()"> </div>
+
+  </div>
+
+
+
+
+  <!-- signup here -->
+  <div class="contentLogin">
+    <ion-card class="card">
+      <ion-card-title style="margin: '20px'; color: gray;">sign in your account</ion-card-title>
+      <div>
+        <ion-label position="stacked">Floating Label</ion-label>
+        <ion-input class="inp" id="inp1" type="text" placeholder="name" required (ionFocus)="focusEmail('inp1')"
+          (ionBlur)="unFocusEmail('inp1')" [(ngModel)]="signup.name" [value]="signup.name"></ion-input>
+        <small>{{signupValidation.name}}</small>
+      </div>
+      <div>
+        <ion-label position="stacked">Floating Label</ion-label>
+        <ion-input class="inp" id="inp2" type="text" placeholder="surname" (ionFocus)="focusEmail('inp2')"
+          (ionBlur)="unFocusEmail('inp2')" [(ngModel)]="signup.surname"></ion-input>
+        <small>{{signupValidation.surname}}</small>
+      </div>
+      <div>
+        <ion-label position="stacked">Floating Label</ion-label>
+        <ion-input class="inp" id="inp3" type="text" placeholder="email" (ionFocus)="focusEmail('inp3')"
+          (ionBlur)="unFocusEmail('inp3')" [(ngModel)]="signup.email"></ion-input>
+        <small>{{signupValidation.email}}</small>
+      </div>
+      <div>
+        <ion-label position="stacked">Floating Label</ion-label>
+        <ion-input class="inp" id="inp4" type="text" placeholder="password" (ionFocus)="focusEmail('inp4')"
+          (ionBlur)="unFocusEmail('inp4')" [(ngModel)]="signup.password"></ion-input>
+        <small>{{signupValidation.password}}</small>
+      </div>
+
+      <ion-button class="ion-btn" expand="block" size="medium" color="medium" fill="outline" expand="block" mode="ios"
+        (click)="signupSubmit()">Sign up
+      </ion-button>
+
+      <a style="color: gray;"> already have account <span style="text-decoration: none; text-decoration:underline;" (click)="isLoginBannerOpen()">
+          sign in here</span></a>
+
+
+
+    </ion-card>
+  </div>
+
+
+</ion-content>
